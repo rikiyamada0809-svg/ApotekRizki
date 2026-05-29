@@ -52,14 +52,6 @@
                     <!-- Content -->
 
                     <div class="container">
-                        @if (session('success'))
-                            <div class="alert alert-success d-flex align-items-center mt-4" role="alert">
-                                <span class="alert-icon text-success me-2">
-                                    <i class="ti ti-check ti-xs"></i>
-                                </span>
-                                {{ session('success') }}
-                            </div>
-                        @endif
                         <h1 class="fw-bold py-3 mb-4">@yield('title')</h1>
                         @yield('content')
                     </div>

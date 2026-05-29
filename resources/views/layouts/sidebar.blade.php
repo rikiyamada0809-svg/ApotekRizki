@@ -33,8 +33,8 @@
             </li>
 
             {{-- Kategori --}}
-            <li class="menu-item {{ request()->routeIs('profile.edit') ? 'active' : '' }}">
-              <a href="{{ route('profile.edit') }}" class="menu-link">
+            <li class="menu-item {{ request()->routeIs('categories.index') ? 'active' : '' }}">
+              <a href="{{ route('categories.index') }}" class="menu-link">
                 <i class="menu-icon tf-icons ti ti-category"></i>
                 <div>Kategori</div>
               </a>
