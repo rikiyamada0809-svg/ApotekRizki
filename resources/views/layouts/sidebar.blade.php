@@ -25,8 +25,8 @@
             </li>
 
             <!-- Kasir -->
-            <li class="menu-item {{ request()->routeIs('profile.edit') ? 'active' : '' }}">
-              <a href="{{ route('profile.edit') }}" class="menu-link">
+            <li class="menu-item {{ request()->routeIs('kasir.*') ? 'active' : '' }}">
+              <a href="{{ route('kasir.index') }}" class="menu-link">
                 <i class="menu-icon tf-icons ti ti-shopping-cart"></i>
                 <div>Kasir</div>
               </a>
@@ -41,8 +41,8 @@
             </li>
 
             {{-- Inventari --}}
-            <li class="menu-item {{ request()->routeIs('profile.edit') ? 'active' : '' }}">
-              <a href="{{ route('profile.edit') }}" class="menu-link">
+            <li class="menu-item {{ request()->routeIs('obats.*') ? 'active' : '' }}">
+              <a href="{{ route('obats.index') }}" class="menu-link">
                 <i class="menu-icon tf-icons ti ti-box"></i>
                 <div>Inventari</div>
               </a>

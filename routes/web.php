@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\CategoriesController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ObatController;
+use App\Http\Controllers\PenjualanController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -24,6 +26,20 @@ Route::post('/categories', [CategoriesController::class, 'store'])->name('catego
 Route::get('/categories/{category}/edit', [CategoriesController::class, 'edit'])->name('categories.edit');
 Route::put('/categories/{category}', [CategoriesController::class, 'update'])->name('categories.update');
 Route::delete('/categories/{category}', [CategoriesController::class, 'destroy'])->name('categories.destroy');
+
+//Obats
+Route::get('/obats', [ObatController::class, 'index'])->name('obats.index');
+Route::get('/obats/create', [ObatController::class, 'create'])->name('obats.create');
+Route::post('/obats', [ObatController::class, 'store'])->name('obats.store');
+Route::get('/obats/{obat}', [ObatController::class, 'show'])->name('obats.show');
+Route::get('/obats/{obat}/edit', [ObatController::class, 'edit'])->name('obats.edit');
+Route::put('/obats/{obat}', [ObatController::class, 'update'])->name('obats.update');
+Route::delete('/obats/{obat}', [ObatController::class, 'destroy'])->name('obats.destroy');
+
+//Kasir
+Route::get('/kasir', [PenjualanController::class, 'index'])->name('kasir.index');
+Route::get('/kasir/search', [PenjualanController::class, 'search'])->name('kasir.search');
+Route::post('/kasir/store', [PenjualanController::class, 'store'])->name('kasir.store');
 
 
 require __DIR__.'/auth.php';
